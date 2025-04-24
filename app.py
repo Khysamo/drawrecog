@@ -39,8 +39,8 @@ drawing_mode = "freedraw"
 stroke_width = st.sidebar.slider('Selecciona el ancho de línea', 1, 30, 5)
 #stroke_color = '#FFFFFF' # Set background color to white
 #bg_color = '#000000'
-stroke_color = "#000000" 
-bg_color = '#FFFFFF'
+stroke_color = st.color_picker("Color de trazo", "#C8A2C8", key="1")
+bg_color = st.color_picker("Color del fondo", "#000000",key="2")
 #realtime_update = st.sidebar.checkbox("Update in realtime", True)
 
 
@@ -50,8 +50,8 @@ canvas_result = st_canvas(
     stroke_width=stroke_width,
     stroke_color=stroke_color,
     background_color=bg_color,
-    height=300,
-    width=400,
+    height=500,
+    width=600,
     #background_image= None #Image.open(bg_image) if bg_image else None,
     drawing_mode=drawing_mode,
     key="canvas",
